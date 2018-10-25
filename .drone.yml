@@ -4,6 +4,4 @@ pipeline:
     commands:
       - export GOPROXY=https://storage.googleapis.com/go-cloud-modules/
       - export GO111MODULE=on
-      - go install ./wire/cmd/wire
-      - internal/testing/checkpr.sh -short -race; else go test -short -race ./...
-      - internal/testing/wirecheck.sh
+      - go test
